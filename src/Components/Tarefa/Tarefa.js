@@ -3,8 +3,11 @@ import { DeleteFilled } from '@ant-design/icons';
 import styled from 'styled-components';
 
 export const Tarefa = (props) => {
-    debugger;
     let tarefa = props.value;
+
+    const deleteItem = (index) => {
+        props.onChange(index)
+    }
 
     const Task = styled.div`
         padding: 5px;
@@ -45,7 +48,7 @@ export const Tarefa = (props) => {
                             >
                                 {valorTarefa} 
                             </Task>
-                            <DeleteButton>
+                            <DeleteButton onClick={() => deleteItem(index)}>
                                 <DeleteFilled />
                             </DeleteButton>
                         </Wrapper>

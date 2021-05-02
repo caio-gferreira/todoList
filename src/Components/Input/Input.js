@@ -6,7 +6,7 @@ import { Tarefa } from '../Tarefa/Tarefa';
 
 export const Input = (props) => {
 
-  const [tarefa, setTarefa] = useState([]);
+  const [tarefas, setTarefas] = useState([]);
 
     const Wrapper = styled.div`
         display: flex;
@@ -30,12 +30,17 @@ export const Input = (props) => {
         <div>
             <Wrapper>
                 <Input id="inputField" />
-                <Button onClick={() => { setTarefa((tarefa) => [...tarefa, document.getElementById('inputField').value]) }} ><PlusSquareFilled /></Button>
+                <Button onClick={() => { setTarefas((tarefa) => [...tarefa, document.getElementById('inputField').value]) }} ><PlusSquareFilled /></Button>
             </Wrapper>
 
             <Wrapper>
                 <Tarefa 
-                    value={tarefa} 
+                    value={tarefas}
+                    onChange={(index, novoValor) => {
+                        const tarefasAtualizadas = [...tarefas];
+                        tarefasAtualizadas.splice(index, 1);
+                        setTarefas(tarefasAtualizadas);
+                    }}
                 />
             </Wrapper>
 
