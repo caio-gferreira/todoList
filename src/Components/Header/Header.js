@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
 export const Header = () => {
 
+    const Titulo = styled.h1`
+        color: #f8f8f2;
+    `
+
     return (
         <div>
-            Todo List 
+            <Titulo> To Do List </Titulo>
         </div>
     )
 }

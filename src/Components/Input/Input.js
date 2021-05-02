@@ -15,15 +15,22 @@ export const Input = (props) => {
     `
 
     const Input = styled.input`
-        border-radius: 5px;
+        border-radius: 3px;
         padding: 5px;
-        height: 15px;
+        height: 25px;
+        background-color: #282a36;
+        color: #fff;
+        border: 1px solid #6272a4;
+        max-width: 315px;
+        min-width: 315px;
+        font-size: 20px;
     `
 
     const Button = styled.span`
-        color: #bd93f9;
-        font-size: 30px;
+        color: #50fa7b;
+        font-size: 35px;
         cursor: pointer;
+        padding: 3px;
     `
 
     return (

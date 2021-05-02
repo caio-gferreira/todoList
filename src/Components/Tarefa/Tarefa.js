@@ -12,15 +12,16 @@ export const Tarefa = (props) => {
     const Task = styled.div`
         padding: 5px;
         width: 100%;
-        font-size: 18px;
+        font-size: 20px;
     `
 
     const Wrapper = styled.div`
-        background-color: #8be9fd;
+        background-color: #6272a4;
+        color: #fff;
         margin: 5px;
         border-radius: 5px;
-        max-width: 350px;
-        min-width: 350px;
+        max-width: 360px;
+        min-width: 360px;
         display: flex;
         align-items: center;
         text-align: justify;
@@ -28,11 +29,11 @@ export const Tarefa = (props) => {
     `
 
     const DeleteButton = styled.span`
-        font-size: 18px;
+        font-size: 20px;
         cursor: pointer;
         margin-left: 0 5px;
         &:hover {
-            color: red;
+            color: #e91e63;
             transition: 300ms;
         }
     `
